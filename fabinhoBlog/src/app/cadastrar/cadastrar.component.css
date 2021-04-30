@@ -7,3 +7,32 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.b-Cancel{
+    
+    border-color: #c0392b;
+    
+
+}
+
+.b-Cancel:hover{
+
+    background-color:#e74c3c;
+    border-color: darkred;
+    color: white;
+
+}
+
+.b-Cadas{
+
+    border-color: #27ae60;
+
+}
+
+.b-Cadas:hover{
+
+    background-color:#2ecc71;
+    border-color: darkgreen;
+    color: white;
+
+}

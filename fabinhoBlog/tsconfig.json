@@ -5,6 +5,7 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "strictPropertyInitialization": false, //Não solicita inicialização dos atributos
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
