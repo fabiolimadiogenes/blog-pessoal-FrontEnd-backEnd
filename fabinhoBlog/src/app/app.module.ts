@@ -10,7 +10,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common"
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import { TemaComponent } from './tema/tema.component'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common"
     RodapeComponent,
     LoginComponent,
     CadastrarComponent,
-    HomeComponent
+    HomeComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
