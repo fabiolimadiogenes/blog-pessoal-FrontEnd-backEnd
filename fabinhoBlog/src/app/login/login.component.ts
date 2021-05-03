@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
 
+      console.log(environment.id)
+
       this.router.navigate(["/home"])
     }, erro =>{
       if(erro.status == 500){
