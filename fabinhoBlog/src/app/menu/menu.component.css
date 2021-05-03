@@ -5,3 +5,18 @@
 a {
     cursor: pointer;
 }
+
+.bg-cor{
+  background: #145074;
+}
+
+.icoEfect{
+  color: #ffffff;
+  text-decoration:none;
+}
+
+.icoEfect:hover{
+  color: #00bfff;
+}
+
+

@@ -5,3 +5,9 @@
 .fs-18{
   font-size: 18pt;
 }
+
+.corFundo{
+  background: slategray;
+  background-size: cover;
+  background-blend-mode: color;
+}
