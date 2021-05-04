@@ -7,31 +7,34 @@
 }
 
 .b-Cancel{
-
-  border-color: #c0392b;
-
-
+  background: transparent;
+  border-color: #fa0000;
+  border-radius: 6pt;
+  transition-duration: 300ms;
 }
 
 .b-Cancel:hover{
-
-  background-color:#e74c3c;
-  border-color: darkred;
+  transition-duration: 300ms;
+  background-color:#a50808;
+  border-color: rgb(51, 6, 6);
   color: white;
-
 }
 
 .b-Cadas{
-
-  border-color: #27ae60;
-
+  background: transparent;
+  border-color: #009efa;
+  border-radius: 6pt;
+  transition-duration: 300ms;
 }
 
 .b-Cadas:hover{
-
-  background-color:#2ecc71;
-  border-color: darkgreen;
+  transition-duration: 300ms;
+  background-color:#009efa;
+  border-color: rgb(2, 108, 179);
   color: white;
-
 }
 
+.modal-content{
+
+  border-radius: 6%;
+}

@@ -10,15 +10,18 @@ ul.social-network li{
 }
 
 .fa{
+    transition-duration: 200ms;
     font-size: 35pt;
     color: white;
     padding: 10px;
 }
 
 .fa:hover{
-    color: rgb(231, 65, 65);
+    transition-duration: 200ms;
+    color: rgb(0, 195, 255);
 }
 
 .copyright{
     background-color: rgb(85, 85, 85);
 }
+

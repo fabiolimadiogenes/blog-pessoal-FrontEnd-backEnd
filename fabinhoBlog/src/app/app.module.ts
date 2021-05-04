@@ -1,4 +1,4 @@
-import {HttpClientModule} from "@angular/common/http"
+import { HttpClientModule} from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +12,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import { TemaComponent } from './tema/tema.component'
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 
 @NgModule({
@@ -22,13 +24,14 @@ import { TemaComponent } from './tema/tema.component'
     LoginComponent,
     CadastrarComponent,
     HomeComponent,
-    TemaComponent
+    TemaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
   ],
   providers: [{
     provide: LocationStrategy,

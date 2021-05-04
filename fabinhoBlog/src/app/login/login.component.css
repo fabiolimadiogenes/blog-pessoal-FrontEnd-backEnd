@@ -1,7 +1,7 @@
 #img-bg{
-    background-image: url("https://i.imgur.com/lfddJVj.png");
+    background-image: url("https://i.imgur.com/7DvwAhY.png");
 
-    min-height: 700px;
+    min-height: 800px;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -14,13 +14,21 @@
     width: 60px;
     height: 30px;
     background: transparent;
-    border-color: #27ae60;
+    border-color: #009efa;
     border-radius: 6pt;
+    transition-duration: 300ms;
 }
 
 .btnEnter:hover{
-    
-    background-color:#2ecc71;
-    border-color: darkgreen;
+    transition-duration: 300ms;
+    background-color:#009efa;
+    border-color: rgb(2, 108, 179);
     color: white;
+}
+
+.loginBox{
+  background-color: rgb(255, 255, 255);
+  border-width: 10px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 8%;
 }
