@@ -35,3 +35,5 @@ export class AuthService {
     return ok
   }
 }
+
+//service se comunica com o controller do back. Uma rota
