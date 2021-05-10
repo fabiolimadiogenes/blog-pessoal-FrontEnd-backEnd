@@ -33,17 +33,40 @@
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active text-info font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</a>
 
-      <a class="nav-item nav-link text-info font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postages</a>
+      <a (click)="findByIdUser()" class="nav-item nav-link text-info font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postages</a>
 
       <a class="nav-item nav-link text-info font-weight-bold" id="nav-postagensTema-tab" data-toggle="tab" href="#postagensTema" role="tab" aria-controls="nav-postagensTema" aria-selected="false">Postagens por tema</a>
     </div>
   </nav>
-  <div class="tab-content" id="nav-tabContent">
+  <div class="tab-content mt-5" id="nav-tabContent">
     <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-      Todas as postagens
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor="let item of listaPostagens">
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
+            <p class="card-text">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às: {{item.data | date: 'HH:mm'}}</small></p>
+            <p class="card-text"><small class="text-muted">Por: {{item.usuario.nome}}</small></p>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-      Minhas Postages
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor="let item of user.postagem">
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
+            <p class="card-text">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às: {{item.data | date: 'HH:mm'}}</small></p>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="nav-postagensTema-tab">
       Postagens por Temas
@@ -66,25 +89,26 @@
 
         <div class="form-group">
           <label for="titulo">Título</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Digite o título.">
+          <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o título.">
         </div>
 
         <div class="form-group">
           <label for="texto">Postagem</label>
-          <textarea class="form-control" name="texto" id="texto" rows="3" placeholder="Digite sua postagem"></textarea>
+          <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3" placeholder="Digite sua postagem"></textarea>
         </div>
 
         <div class="form-group">
           <label for="texto">Escolha um tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
-          <select class="form-control" name="tema" id="tema">
-            <option value="">Temas</option>
+          <!-- Quando seleciono o change ele pega o item.id e coloca no idTema -->
+          <select class="form-control" name="tema" id="tema" [(ngModel)]="idTema" (change)="findByIdTema()">
+            <option *ngFor="let item of listaTemas" value="{{item.id}}">{{item.descricao}}</option>
           </select>
         </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button type="button" class="btn b-Cancel" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn b-Cadas">Publicar</button>
+        <button type="button" class="btn b-Cadas" data-dismiss="modal" (click)="publicar()">Publicar</button>
       </div>
     </div>
   </div>
