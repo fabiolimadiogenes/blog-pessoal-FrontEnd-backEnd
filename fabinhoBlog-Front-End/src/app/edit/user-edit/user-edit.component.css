@@ -1,0 +1,27 @@
+.b-Cancel{
+  background: transparent;
+  border-color: #fa0000;
+  border-radius: 6pt;
+  transition-duration: 300ms;
+}
+
+.b-Cancel:hover{
+  transition-duration: 300ms;
+  background-color:#a50808;
+  border-color: rgb(51, 6, 6);
+  color: white;
+}
+
+.b-Cadas{
+  background: transparent;
+  border-color: #009efa;
+  border-radius: 6pt;
+  transition-duration: 300ms;
+}
+
+.b-Cadas:hover{
+  transition-duration: 300ms;
+  background-color:#009efa;
+  border-color: rgb(2, 108, 179);
+  color: white;
+}
