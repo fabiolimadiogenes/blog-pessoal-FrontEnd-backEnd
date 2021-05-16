@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   idTema: number
   user: User = new User()
   idUser = environment.id
+  token = localStorage.getItem('token')
 
   constructor(
     private router: Router,
@@ -36,6 +37,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     window.scroll(0,0)
+
+    // if(this.token == null){
+    //   //alert("Sua seção expirou, faça login novamente")
+    //   this.router.navigate(["/login"])
+    // }
 
     if(environment.token == ""){
       //alert("Sua seção expirou, faça login novamente")

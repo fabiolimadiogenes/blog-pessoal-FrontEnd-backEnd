@@ -20,6 +20,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     window.scroll (0,0)
+    environment.token = ""
+    environment.nome = ""
+    environment.foto = ""
+    environment.id = 0
   }
 
   entrar(){
@@ -31,7 +35,9 @@ export class LoginComponent implements OnInit {
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
 
-      console.log(environment.id)
+      // localStorage.setItem('token', this.userLogin.token)
+
+      // console.log(environment.id)
 
       this.router.navigate(["/home"])
     }, erro =>{
