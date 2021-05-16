@@ -18,6 +18,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from "ngx-bootstrap/modal";
 
 
 
@@ -35,6 +37,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent,
+    AlertasComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     HttpClientModule,
     FormsModule,
     FlexLayoutModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,
