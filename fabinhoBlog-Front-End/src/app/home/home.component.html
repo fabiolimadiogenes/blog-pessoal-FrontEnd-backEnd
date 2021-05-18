@@ -44,7 +44,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 ">
           <div class="card-columns">
-            <div class="card text-center" *ngFor="let item of listaPostagens">
+            <div class="card text-center" *ngFor="let item of listaPostagens | orderBy : key : reverse">
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
@@ -63,7 +63,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 ">
             <div class="card-columns">
-              <div class="card text-center" *ngFor="let item of user.postagem">
+              <div class="card text-center" *ngFor="let item of user.postagem | orderBy : key : reverse">
                 <div class="card-body">
                   <h5 class="card-title m-0">{{item.titulo}}</h5>
                   <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
@@ -83,7 +83,7 @@
       <div class="col-md-8 ">
         <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="nav-postagensTema-tab">
           <div class="card-columns" *ngFor="let tema of listaTemas">
-            <div class="card text-center" *ngFor="let item of tema.postagem">
+            <div class="card text-center" *ngFor="let item of tema.postagem | orderBy : key : reverse">
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <p class="card-text">{{item.texto}}</p>

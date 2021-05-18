@@ -24,7 +24,11 @@ export class HomeComponent implements OnInit {
   idTema: number
   user: User = new User()
   idUser = environment.id
-  token = localStorage.getItem('token')
+
+  key = "data"
+  reverse = true
+
+  // token = localStorage.getItem('token')
 
   constructor(
     private router: Router,
