@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     window.scroll (0,0)
+    this.router.navigate(["/login"])
     environment.token = ""
     environment.nome = ""
     environment.foto = ""
@@ -36,6 +37,8 @@ export class LoginComponent implements OnInit {
       environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
+      environment.tipo = this.userLogin.tipo
+
 
       // localStorage.setItem('token', this.userLogin.token)
 

@@ -27,6 +27,10 @@ export class TemaComponent implements OnInit {
       this.router.navigate(["/login"])
     }
 
+    if(environment.tipo != "adm"){
+      this.alertas.showAlertInfo("Você precisa de privilégios administrativos para acessar essa função")
+      this.router.navigate(["/home"])
+    }
 
     this.findAllTemas()
 
