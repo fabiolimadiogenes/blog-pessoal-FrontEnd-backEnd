@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
       environment.id = this.userLogin.id
       environment.tipo = this.userLogin.tipo
 
-
       // localStorage.setItem('token', this.userLogin.token)
 
       // console.log(environment.id)

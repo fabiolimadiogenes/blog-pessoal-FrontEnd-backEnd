@@ -11,6 +11,7 @@
         <li class="nav-item pl-3">
           <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
         </li>
+        <!-- *ngIf="auth.adm()" usar para limitar o acesso apenas para 'adm' -->
         <li class="nav-item pl-3">
           <a [routerLink]="['/user-edit', id]">
           <p class="icoEfect fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
