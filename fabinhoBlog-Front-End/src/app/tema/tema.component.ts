@@ -27,7 +27,10 @@ export class TemaComponent implements OnInit {
       this.router.navigate(["/login"])
     }
 
-
+    if (environment.tipo != "adm"){
+      this.alertas.showAlertInfo("Acesso restrito a administradores")
+      this.router.navigate(["/home"])
+    }
     this.findAllTemas()
 
   }
